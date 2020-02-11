@@ -1,6 +1,9 @@
 # nextjs-semantic
 > Next.js + ~Semantic UI~ Fomantic-UI + Styled Components
 
+## Setup(to be updated)
+1. `yarn`
+2. `yarn run dev`
 
 ## Notice
 Since version 2.0.0, Semantic UI was replaced by Fomantic-UI.
