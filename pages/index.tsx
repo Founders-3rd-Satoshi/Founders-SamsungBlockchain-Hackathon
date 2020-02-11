@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Button } from 'semantic-ui-react';
+import styled from "styled-components";
+import { Button } from "semantic-ui-react";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -20,4 +20,5 @@ const Home = () => (
     </div>
   </StyledContainer>
 );
+
 export default Home;
