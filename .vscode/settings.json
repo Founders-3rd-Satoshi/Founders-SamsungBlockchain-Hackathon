@@ -2,12 +2,12 @@
   "files.associations": {
     "*.js": "javascriptreact"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "eslint.autoFixOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "prettier.printWidth": 300,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": false
 }

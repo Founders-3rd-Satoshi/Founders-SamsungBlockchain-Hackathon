@@ -9,10 +9,10 @@ const StyledContainer = styled.div`
   align-items: center;
 `;
 
-const Home = () => (
+const HomePageMain = () => (
   <StyledContainer>
     <div>
-      <h1>Next.js + Fomantic-UI!</h1>
+      <h1>Next.js + Semantic UI!</h1>
     </div>
     <div>
       <Button primary>Primary</Button>
@@ -20,4 +20,4 @@ const Home = () => (
     </div>
   </StyledContainer>
 );
-export default Home;
+export default HomePageMain;
