@@ -1,5 +1,5 @@
 import PageLayout from "../layouts/PageLayout"
-import TransactionMainPage from "../components/TransactionPage/TransactionMainPage"
+import {TransactionMainPage} from "../components/TransactionPage/TransactionMainPage"
 
 const TransactionPage = () => (
   <PageLayout>
