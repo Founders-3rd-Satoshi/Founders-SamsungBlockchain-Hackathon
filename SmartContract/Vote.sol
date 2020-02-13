@@ -25,6 +25,7 @@ contract Election {
         //can add more
     }
 
+
     function addCandidate (string memory _name) private {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
@@ -58,5 +59,8 @@ contract Election {
    function getVoteCountPerCandidate(uint _candidateId) public view returns(uint seeVoteCount){
        //candidate id --> vote count
         return candidates[_candidateId].voteCount;
+   }
+   function getPeople() public returns ({
+
    }
 }
