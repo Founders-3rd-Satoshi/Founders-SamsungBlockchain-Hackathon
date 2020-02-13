@@ -27,6 +27,19 @@ export class TransactionMainPage extends React.Component {
     this.countContract = new caver.klay.Contract(CountContract, CountContractCA);
   }
 
+  getCandidateList = () => {
+
+  }
+
+  getTotalVoteCount = () => {
+
+  }
+
+  getMyVoteResult = () => {
+    
+
+  }
+
   sendTransaction = () => {
     const walletInstance = caver.klay.accounts.wallet && caver.klay.accounts.wallet[0];
 

@@ -1,4 +1,4 @@
-pragma solidity ^0.6.1;
+pragma solidity ^0.5.6;
 
 contract Election {
     // Model a Candidate
@@ -47,7 +47,7 @@ contract Election {
     //show results
     function getMyVoteResult() public view returns(uint seeMyVoteResult){
       //voted?
-      require(votedOrNot[msg.sender] == true, "No result : the user hasn't voted yet.");
+      require(votedOrNot[msg.sender] == true);
       //if then, voted to whom?
       return whoVotedToWhom[msg.sender];
    }
