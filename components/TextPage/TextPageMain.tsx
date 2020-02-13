@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Divider, Grid, Header, Image, Menu, Segment } from 'semantic-ui-react'
+import { Button, Container, Divider, Grid, Header, Menu, Segment } from 'semantic-ui-react'
 
 const TextPageMain = () => (
   <Container style={{ marginTop: '3em' }}>
@@ -210,9 +210,6 @@ const TextPageMain = () => (
           <Button>One</Button>
           <Button>Two</Button>
         </Button.Group>
-        <Segment attached>
-          <Image src='/images/wireframe/paragraph.png' />
-        </Segment>
         <Button.Group attached='bottom' widths={2}>
           <Button>One</Button>
           <Button>Two</Button>

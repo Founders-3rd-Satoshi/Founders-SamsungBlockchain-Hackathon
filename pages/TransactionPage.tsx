@@ -1,9 +1,9 @@
-import PageLayout from "../layouts/PageLayout"
-import {TransactionMainPage} from "../components/TransactionPage/TransactionMainPage"
+import PlainPageLayout from "../layouts/PlainPageLayout"
+import { TransactionMainPage } from "../components/TransactionPage/TransactionMainPage"
 
 const TransactionPage = () => (
-  <PageLayout>
+  <PlainPageLayout>
     <TransactionMainPage />
-  </PageLayout>
+  </PlainPageLayout>
 );
 export default TransactionPage;

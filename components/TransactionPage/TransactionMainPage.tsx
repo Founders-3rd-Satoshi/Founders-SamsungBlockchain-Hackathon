@@ -5,8 +5,8 @@ import { observable } from "mobx";
 import { observer } from "mobx-react";
 
 import caver from "../../klaytn/caver";
-import { CountContract } from "../../SmartContract/ABI";
-import { CountContractCA } from "../../SmartContract/CA";
+// import {CountContract} from "../../SmartContract/ABI";
+// import {CountContractCA} from "../../SmartContract/CA";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -18,13 +18,13 @@ const StyledContainer = styled.div`
 
 @observer
 export class TransactionMainPage extends React.Component {
-  @observable sender_key = "0x4ab71488ca494ce5ef523af42a239e5988325cc0606318e4236b743af412b6fa";
+  @observable sender_key = "0xc912a9704c5e023404d165a752e6121c6d13cf70141d119944a65eb364d926ba";
   @observable countContract: any;
 
   componentDidMount() {
     caver.klay.accounts.wallet.add(this.sender_key);
 
-    this.countContract = new caver.klay.Contract(CountContract, CountContractCA);
+    // this.countContract = new caver.klay.Contract(CountContract, CountContractCA);
   }
 
   sendTransaction = () => {

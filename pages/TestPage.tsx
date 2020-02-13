@@ -1,9 +1,9 @@
-import PageLayout from "../layouts/PageLayout"
+import PlainPageLayout from "../layouts/PlainPageLayout"
 import TextPageMain from "../components/TextPage/TextPageMain"
 
 const TestPage = () => (
-  <PageLayout>
+  <PlainPageLayout>
     <TextPageMain />
-  </PageLayout>
+  </PlainPageLayout>
 );
 export default TestPage;

@@ -3,34 +3,34 @@ pragma solidity ^0.6.1;
 contract Election {
     // Model a Candidate
     struct Candidate {
-        uint id;
+        uint256 id;
         string name;
-        uint voteCount;
+        uint256 voteCount;
     }
 
     // Store accounts that have voted
     mapping(address => bool) public votedOrNot;
     // Read/write candidates
-    mapping(uint => Candidate) public candidates;
+    mapping(uint256 => Candidate) public candidates;
     // Store Candidates Count
-    uint public candidatesCount;
+    uint256 public candidatesCount;
     //mapping who voted to whom
-    mapping(address => uint) public whoVotedToWhom;
+    mapping(address => uint256) public whoVotedToWhom;
     //total vote Count
-    uint public totalVoteCount;
+    uint256 public totalVoteCount;
 
-    function candidateList () public {
+    function candidateList() public {
         addCandidate("Candidate 1");
         addCandidate("Candidate 2");
         //can add more
     }
 
-    function addCandidate (string memory _name) private {
+    function addCandidate(string memory _name) private {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 
-    function vote (uint _candidateId) public {
+    function vote(uint256 _candidateId) public {
         // require that they haven't voted before
         require(!votedOrNot[msg.sender]);
         // require a valid candidate
@@ -45,18 +45,29 @@ contract Election {
     }
 
     //show results
-    function getMyVoteResult() public view returns(uint seeMyVoteResult){
-      //voted?
-      require(votedOrNot[msg.sender] == true, "No result : the user hasn't voted yet.");
-      //if then, voted to whom?
-      return whoVotedToWhom[msg.sender];
-   }
-   function getTotalVoteCount() public view returns(uint seetotalVoteCount){
-       //total votes
-       return totalVoteCount;
-   }
-   function getVoteCountPerCandidate(uint _candidateId) public view returns(uint seeVoteCount){
-       //candidate id --> vote count
+    function getMyVoteResult() public view returns (uint256 seeMyVoteResult) {
+        //voted?
+        require(
+            votedOrNot[msg.sender] == true,
+            "No result : the user hasn't voted yet."
+        );
+        //if then, voted to whom?
+        return whoVotedToWhom[msg.sender];
+    }
+    function getTotalVoteCount()
+        public
+        view
+        returns (uint256 seetotalVoteCount)
+    {
+        //total votes
+        return totalVoteCount;
+    }
+    function getVoteCountPerCandidate(uint256 _candidateId)
+        public
+        view
+        returns (uint256 seeVoteCount)
+    {
+        //candidate id --> vote count
         return candidates[_candidateId].voteCount;
-   }
+    }
 }
